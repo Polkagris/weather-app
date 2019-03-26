@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import axios from 'axios'
 
 import { Icon }  from 'leaflet'
 //import 'leaflet/dist/leaflet.css'
@@ -19,3 +20,4 @@ Icon.Default.mergeOptions({
 new Vue({
   render: h => h(App),
 }).$mount('#app')
+

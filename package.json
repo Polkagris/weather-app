@@ -3,14 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "src/main.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+
     "leaflet": "^1.4.0",
-    "vue": "^2.6.6",
     "vue2-leaflet": "^2.0.2"
+
+    "axios": "^0.18.0",
+    "vue": "^2.6.10"
+
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
@@ -44,5 +49,17 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "description": "```\r npm install\r ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Polkagris/weather-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Polkagris/weather-app/issues"
+  },
+  "homepage": "https://github.com/Polkagris/weather-app#readme"
 }
