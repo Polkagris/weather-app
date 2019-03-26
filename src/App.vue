@@ -1,22 +1,34 @@
 <template>
-
   <div id="app">
+    <div class="container">
+
+      <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <Maps/>
+          </div>
+
+          <div class="col-md-6 col-sm-6">
+            <HelloWorld msg="Welcome to Your Vue.js App"/>
+          </div>
+        </div>
+      </div>
+    </div>
     
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <Maps/>
-  </div>
+
+  
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import Maps from './components/Maps.vue'
+import Forcast from './components/Forcasts.vue'
 
 export default {
   name: 'app',
   components: {
     HelloWorld,
-    Maps
+    Maps,
+    
   }
 }
 </script>
