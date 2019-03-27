@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>Title</h1>
     
     <h3>Current Weather in {{ infoCurrent.data.location.name }}</h3>
     <ul>
@@ -32,7 +32,6 @@ import axios from 'axios'
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String,
     infoCurrent: null,
     infoForecast: null,
     base: 'Oslo',

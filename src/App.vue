@@ -8,13 +8,12 @@
           </div>
 
           <div class="col-md-6 col-sm-6">
-            <HelloWorld msg="Welcome to Your Vue.js App"/>
+            <HelloWorld ref="test" />
           </div>
         </div>
 
       <div class="row">
           <div class="col-md-12 col-sm-6">
-            <Forcasts/>
           </div>
         </div>
 
