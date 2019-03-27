@@ -73,5 +73,9 @@ height: 500px;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+.btn{
+    flex: 1 1 0;
+    margin: 0 1px;
+}
 
 </style>
