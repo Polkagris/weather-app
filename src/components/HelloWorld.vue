@@ -1,28 +1,56 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h1>{{ msg }}</h1>
+          <h3>Cities</h3>
+            <div id="buttonContainer">
+              <button class="btn btn-light button" v-on:click="updateWeather('Oslo'), updateForecast('Oslo')">Oslo</button>
+              <button class="btn btn-light button" v-on:click="updateWeather('Bergen'), updateForecast('Bergen')">Bergen</button>
+              <button class="btn btn-light button" v-on:click="updateWeather('Stavanger'), updateForecast('Stavanger')">Stavanger</button>
+              <button class="btn btn-light button" v-on:click="updateWeather('Trondheim'), updateForecast('Trondheim')">Trondheim</button>
+              <button class="btn btn-light button" v-on:click="updateWeather('Kristiansand'), updateForecast('Kristiansand')">Kristiansand</button>
+            </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+        <h3>Current Weather in {{ infoCurrent.data.location.name }}</h3>
+          <ul>
+            <li>
+                {{ infoCurrent.data.current.condition.text }}
+                <img :src="infoCurrent.data.current.condition.icon">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Forecast for {{infoCurrent.data.location.name}} </h3>
+        <div id="forecasts" >
+          
+            <li id="singleForecast" v-for="day in infoForecast.data.forecast.forecastday">
+              <div class="card">
+                {{day.date}}
+                {{day.day.condition.text}}
+                <img :src="day.day.condition.icon" style="width: 3rem;">
+            </div>
+            </li>
+        </div>
+      </div>
+    </div>
     
-    <h3>Current Weather in {{ infoCurrent.data.location.name }}</h3>
-    <ul>
-      <li>
-          {{ infoCurrent.data.current.condition.text }}
-          <img :src="infoCurrent.data.current.condition.icon">
-      </li>
-    </ul>
-    <h3>Forecast for {{infoCurrent.data.location.name}} </h3>
-    <li v-for="day in infoForecast.data.forecast.forecastday">
-        {{day.date}}
-        {{day.day.condition.text}}
-        <img :src="day.day.condition.icon">
-      </li>
-    <h3>Cities</h3>
-    <ul>
-      <li><a href="#" v-on:click="updateWeather('Oslo'), updateForecast('Oslo')">Oslo</a></li>
-      <li><a href="#" v-on:click="updateWeather('Bergen'), updateForecast('Bergen')">Bergen</a></li>
-      <li><a href="#" v-on:click="updateWeather('Stavanger'), updateForecast('Stavanger')">Stavanger</a></li>
-      <li><a href="#" v-on:click="updateWeather('Trondheim'), updateForecast('Trondheim')">Trondheim</a></li>
-      <li><a href="#" v-on:click="updateWeather('Kristiansand'), updateForecast('Kristiansand')">Kristiansand</a></li>
-    </ul>
+    
+    
     
   </div>
 </template>
@@ -89,5 +117,19 @@ li {
 }
 a {
   color: #42b983;
+}
+#forecasts{
+  display: flex;
+  flex-wrap: wrap;
+}
+#singleForecast{
+  width: 15%;
+}
+#buttonContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.button{
+  flex: 1 1 0;
 }
 </style>

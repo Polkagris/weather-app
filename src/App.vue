@@ -8,7 +8,7 @@
           </div>
 
           <div class="col-md-6 col-sm-6">
-            <HelloWorld msg="Welcome to Your Vue.js App"/>
+            <HelloWorld msg="Weather App"/>
           </div>
         </div>
 
