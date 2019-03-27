@@ -2,19 +2,18 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     
-    <h3>Current Weather</h3>
+    <h3>Current Weather in {{ infoCurrent.data.location.name }}</h3>
     <ul>
       <li>
-          Location: {{ infoCurrent.data.location.name }} 
-      </li>
-      <li>
-          Weather: {{ infoCurrent.data.current.condition.text }}
+          {{ infoCurrent.data.current.condition.text }}
+          <img :src="infoCurrent.data.current.condition.icon">
       </li>
     </ul>
     <h3>Forecast for {{infoCurrent.data.location.name}} </h3>
     <li v-for="day in infoForecast.data.forecast.forecastday">
         {{day.date}}
         {{day.day.condition.text}}
+        <img :src="day.day.condition.icon">
       </li>
     <h3>Cities</h3>
     <ul>
