@@ -37,7 +37,7 @@ export default {
 },
   methods: {
     initMap() {
-        this.map = L.map('map').setView([59.91273, 10.74609],10);
+        this.map = L.map('map').setView([61.91273, 10.74609],5);
 
         this.tileLayer = L.tileLayer(
         'https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png',
@@ -47,12 +47,13 @@ export default {
         }
         );
         this.tileLayer.addTo(this.map);
-        
-    },
-    initLayers() {
-        const marker = L.marker([59.91273, 10.74609]);
-        marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
-        marker.addTo(this.map);
+
+        L.marker([59.913868, 10.752245], {title: "Oslo"}).addTo(this.map);
+        L.marker([63.430515, 10.395053], {title: "Trondheim"}).addTo(this.map);
+        L.marker([60.391262, 5.322054], {title: "Bergen"}).addTo(this.map);
+        L.marker([58.159912, 8.018206], {title: "Kristiansand"}).addTo(this.map);
+        L.marker([58.969975, 5.733107], {title: "Stavanger"}).addTo(this.map);
+
     },
 
     changeLocation(lat, lon) {
