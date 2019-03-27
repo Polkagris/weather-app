@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-md-12">
         <h1>{{ msg }}</h1>
-          <h3>Cities</h3>
+          <h3>Forecasts</h3>
             <div id="buttonContainer">
               <button class="btn btn-light button" v-on:click="updateWeather('Oslo'), updateForecast('Oslo')">Oslo</button>
               <button class="btn btn-light button" v-on:click="updateWeather('Bergen'), updateForecast('Bergen')">Bergen</button>
@@ -34,16 +34,18 @@
 
 
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12 col-sm-12">
+
         <h3>Forecast for {{infoCurrent.data.location.name}} </h3>
         <div id="forecasts" >
           
-            <li id="singleForecast" v-for="day in infoForecast.data.forecast.forecastday">
-              <div class="card">
+            <li id="singleForecast" class="card" v-for="day in infoForecast.data.forecast.forecastday">
+
+                <img :src="day.day.condition.icon" style="width: 3rem;">
                 {{day.date}}
                 {{day.day.condition.text}}
-                <img :src="day.day.condition.icon" style="width: 3rem;">
-            </div>
+                
+
             </li>
         </div>
       </div>
@@ -121,13 +123,21 @@ a {
 #forecasts{
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
+  
 }
 #singleForecast{
-  width: 15%;
+  flex: 1 1 0;
+  min-width: 50px;
 }
+#singleCard{
+  flex: 1 1 0;
+}
+
 #buttonContainer{
     display: flex;
     flex-wrap: wrap;
+    
 }
 .button{
   flex: 1 1 0;
