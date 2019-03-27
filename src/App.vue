@@ -11,6 +11,14 @@
             <HelloWorld msg="Welcome to Your Vue.js App"/>
           </div>
         </div>
+
+      <div class="row">
+          <div class="col-md-12 col-sm-6">
+            <Forcasts/>
+          </div>
+        </div>
+
+
       </div>
     </div>
     
@@ -21,13 +29,14 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import Maps from './components/Maps.vue'
-import Forcast from './components/Forcasts.vue'
+import Forcasts from './components/Forcasts.vue'
 
 export default {
   name: 'app',
   components: {
     HelloWorld,
     Maps,
+    Forcasts
     
   }
 }
