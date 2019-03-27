@@ -5,17 +5,17 @@
 
   </div>
   <div id="container">
-    <button class="btn btn-info" v-on:click="changeLocation(60.39299, 5.32415)">Bergen</button>
-    <button class="btn btn-info" v-on:click="changeLocation(63.43049, 10.39506)">Trondheim</button>
     <button class="btn btn-info" v-on:click="changeLocation(59.91273, 10.74609)">Oslo</button>
+    <button class="btn btn-info" v-on:click="changeLocation(60.39299, 5.32415)">Bergen</button>
     <button class="btn btn-info" v-on:click="changeLocation(58.97005, 5.73332)">Stavanger</button>
+    <button class="btn btn-info" v-on:click="changeLocation(63.43049, 10.39506)">Trondheim</button>
     <button class="btn btn-info" v-on:click="changeLocation(58.14671, 7.9956)">Kristiansand</button>
  </div>
 </div>
 </template>
 
 <script>
-//import HelloWorld from './HelloWorld.vue'
+import HelloWorld from './HelloWorld.vue'
 
 export default {
   name: 'Maps',
@@ -72,6 +72,10 @@ height: 500px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+.btn{
+    flex: 1 1 0;
+    margin: 0 1px;
 }
 
 </style>

@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> 
     <div class="container">
 
       <div class="row">
@@ -8,7 +9,7 @@
           </div>
 
           <div class="col-md-6 col-sm-6">
-            <HelloWorld ref="test" />
+            <HelloWorld msg="Weather App"/>
           </div>
         </div>
 
@@ -29,6 +30,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import Maps from './components/Maps.vue'
 import Forcasts from './components/Forcasts.vue'
 
+
 export default {
   name: 'app',
   components: {
@@ -42,7 +44,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
